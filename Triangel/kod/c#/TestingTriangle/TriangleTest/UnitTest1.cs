@@ -74,12 +74,6 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void initWithPoint()
-        {
-
-        }
-
-        [TestMethod]
         public void initWithDoubleArray()
         {
             double[] equilateralArray = { 1.0, 1.0, 1.0 };
