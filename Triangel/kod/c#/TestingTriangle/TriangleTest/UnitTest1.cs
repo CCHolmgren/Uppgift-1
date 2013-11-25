@@ -32,5 +32,19 @@ namespace UnitTestProject1
             Assert.IsFalse(new Triangle(1.0, 2.0, 3.0).isEquilateral());
             Assert.IsFalse(new Triangle(1.5, 1.6, 1.7).isEquilateral());
         }
+
+
+        [TestMethod]
+        public void isIsoscelesTest()
+        {
+            //These are expected to Assert to true
+            Assert.IsTrue(new Triangle(1.0, 1.0, 2.0).isIsosceles());
+            Assert.IsTrue(new Triangle(1.5, 2.5, 1.5).isIsosceles());
+
+            //These shouldn't assert
+            Assert.IsFalse(new Triangle(1.0, 2.0, 3.0).isIsosceles());
+            Assert.IsFalse(new Triangle(1.5, 1.6, 1.7).isIsosceles());
+        }
+
     }
 }
