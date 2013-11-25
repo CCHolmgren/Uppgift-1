@@ -14,6 +14,10 @@ test 11: 0 0 0 förväntat resultat: Indata kan inte tolkas som en triangel
 test 12: 0 0 1 förväntat resultat: Indata kan inte tolkas som en triangel
 test 13: 0 1 1 förväntat resultat: Indata kan inte tolkas som en triangel
 
+Kan vi få den att krasha
+test 14: [^S] od d förväntat result: Indata kan itne tolkas som en triangel 
+test 15: [Allt som inte ser ut som siffror, eller kan tolkas som det via en cast] förväntat resultat: Indata kan inte tolkas som en triangel
+
 1 resultat: triangeln är liksidig
 2 resultat: triangeln är likbent
 3 resultat: triangeln har inga lika sidor
@@ -27,3 +31,5 @@ test 13: 0 1 1 förväntat resultat: Indata kan inte tolkas som en triangel
 11 resultat: triangeln är liksidig
 12 resultat: triangeln är likbent
 13 resultat: triangeln är likbent
+14 resultat: krash med Ohanterat undantag System.FormatException
+15 resultat: krash med Ohanterat undantag Sysmte.FormatException
