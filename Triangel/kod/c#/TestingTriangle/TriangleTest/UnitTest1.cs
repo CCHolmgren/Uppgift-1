@@ -73,5 +73,22 @@ namespace UnitTestProject1
             Assert.IsFalse(new Triangle(0.0, 1.0, 2.0).isEquilateral());
         }
 
+        [TestMethod]
+        public void initWithPoint()
+        {
+
+        }
+
+        [TestMethod]
+        public void initWithDoubleArray()
+        {
+            double[] equilateralArray = { 1.0, 1.0, 1.0 };
+            double[] isoscelesArray =   { 1.0, 1.0, 2.0 };
+            double[] scaleneArray =     { 1.0, 2.0, 3.0 };
+
+            Assert.IsTrue(new Triangle(equilateralArray).isEquilateral());
+            Assert.IsTrue(new Triangle(isoscelesArray).isIsosceles());
+            Assert.IsTrue(new Triangle(scaleneArray).isScalene());
+        }
     }
 }
