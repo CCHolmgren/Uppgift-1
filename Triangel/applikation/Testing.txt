@@ -15,9 +15,11 @@ test 12: 0 0 1 förväntat resultat: Indata kan inte tolkas som en triangel
 test 13: 0 1 1 förväntat resultat: Indata kan inte tolkas som en triangel
 
 Kan vi få den att krasha
-test 14: [^S] od d förväntat result: Indata kan itne tolkas som en triangel 
+test 14: [^S] od d förväntat resultat: Indata kan itne tolkas som en triangel 
 test 15: [Allt som inte ser ut som siffror, eller kan tolkas som det via en cast] förväntat resultat: Indata kan inte tolkas som en triangel
 
+Andra representationer av värden, i andra baser
+test 16: 0x01 0x01 0x01 förväntat resultat: Triangeln är liksidig
 
 1 resultat: triangeln är liksidig kommentar: Grundläggande funktion, väntat resultat 
 2 resultat: triangeln är likbent kommentar:  Grundläggande funktion, väntat resultat
@@ -33,4 +35,5 @@ test 15: [Allt som inte ser ut som siffror, eller kan tolkas som det via en cast
 12 resultat: triangeln är likbent kommentar: Se förra
 13 resultat: triangeln är likbent kommentar: Se förrförra
 14 resultat: krash med Ohanterat undantag System.FormatException kommentar: Väntat om man antar att input inte kollas innan man parsar det 
-15 resultat: krash med Ohanterat undantag Sysmte.FormatException kommentar: Se förra
+15 resultat: krash med Ohanterat undantag System.FormatException kommentar: Se förra
+16 resultat: krash med Ohanterat undantag System.FormatException kommentar: hexrepresentation av värdet 1 fungerade inte, antagligen för x'ets skull
