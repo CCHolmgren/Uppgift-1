@@ -56,6 +56,31 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
+        public void NotTriangleTest()
+        {
+            try
+            { //Does it return true even if it's not a triangle
+                new Triangle(0.0, 0.0, 0.0);
+                new Triangle(0.0, 0.0, 1.0);
+                new Triangle(0.0, 1.0, 2.0);
+
+                //Does it return true even if it's not a triangle
+                new Triangle(0.0, 0.0, 0.0);
+                new Triangle(0.0, 0.0, 1.0);
+                new Triangle(0.0, 1.0, 2.0);
+                //Does it return true even if it's not a triangle
+                new Triangle(0.0, 0.0, 0.0);
+                new Triangle(0.0, 0.0, 1.0);
+                new Triangle(0.0, 1.0, 2.0);
+                Assert.Fail("The constructors did not throw an exception.");
+            }
+            catch(ArgumentOutOfRangeException e)
+            {
+
+            }
+        }
+
+        [TestMethod]
         public void initWithDoubleArray()
         {
             double[] equilateralArray = { 1.0, 1.0, 1.0 };
@@ -65,17 +90,6 @@ namespace UnitTestProject1
             Assert.IsTrue(new Triangle(equilateralArray).isEquilateral());
             Assert.IsTrue(new Triangle(isoscelesArray).isIsosceles());
             Assert.IsTrue(new Triangle(scaleneArray).isScalene());
-        }
-
-        [TestMethod]
-        public void nontriangleTest()
-        {
-            try
-            {
-                new Triangle(0.0, 0.0, 0.0);
-                Assert.Fail();
-            }
-            catch (ArgumentOutOfRangeException) { };
         }
     }
 }
