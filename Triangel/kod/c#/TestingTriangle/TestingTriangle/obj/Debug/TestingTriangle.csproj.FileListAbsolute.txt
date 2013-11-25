@@ -1,0 +1,7 @@
+C:\Users\Chrille\School\Uppgift-1\Triangel\kod\c#\TestingTriangle\TestingTriangle\bin\Debug\TestingTriangle.exe.config
+C:\Users\Chrille\School\Uppgift-1\Triangel\kod\c#\TestingTriangle\TestingTriangle\bin\Debug\TestingTriangle.exe
+C:\Users\Chrille\School\Uppgift-1\Triangel\kod\c#\TestingTriangle\TestingTriangle\bin\Debug\TestingTriangle.pdb
+C:\Users\Chrille\School\Uppgift-1\Triangel\kod\c#\TestingTriangle\TestingTriangle\obj\Debug\TestingTriangle.exe
+C:\Users\Chrille\School\Uppgift-1\Triangel\kod\c#\TestingTriangle\TestingTriangle\obj\Debug\TestingTriangle.pdb
+C:\Users\Chrille\School\Uppgift-1\Triangel\kod\c#\TestingTriangle\TestingTriangle\bin\Debug\TestingTriangle.exe.CodeAnalysisLog.xml
+C:\Users\Chrille\School\Uppgift-1\Triangel\kod\c#\TestingTriangle\TestingTriangle\bin\Debug\TestingTriangle.exe.lastcodeanalysissucceeded
