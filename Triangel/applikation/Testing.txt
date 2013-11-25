@@ -37,3 +37,7 @@ test 16: 0x01 0x01 0x01 förväntat resultat: Triangeln är liksidig
 14 resultat: krash med Ohanterat undantag System.FormatException kommentar: Väntat om man antar att input inte kollas innan man parsar det 
 15 resultat: krash med Ohanterat undantag System.FormatException kommentar: Se förra
 16 resultat: krash med Ohanterat undantag System.FormatException kommentar: hexrepresentation av värdet 1 fungerade inte, antagligen för x'ets skull
+
+Sammanställning
+Grundläggande funktionen verkar fungera. Då vi inte vet den bakomliggande representationen av värdena så är det svårt att testa saker som overflow eller underflow, vilket hade varit intressant att testa om de värden man kommer använda har den mängden siffror. Om värdena är representerade av tillexempel BigNum eller Decimal eller motsvarande class som hanterar arbiträrt stora eller nummer med många decimaler så borde det inte vara ett problem att indata får ett värde som annars skulle få en fel decimal representation i en float eller en double.
+Däremot verkar inte programmet göra någon indata koll alls då testerna 4 till 13 resulterar i ett resultat, när ett sådant inte är att förvänta sig. Man kan också se att indata inte kollas alls då programmet krashar med ett ohanterat undantag om man sätter in något som inte kan tänkas tolkas som en tal, till exempel textsträngen "dsa". 
