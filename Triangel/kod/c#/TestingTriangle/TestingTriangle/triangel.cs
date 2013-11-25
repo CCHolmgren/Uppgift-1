@@ -48,7 +48,7 @@ public class Triangle {
 
   private void checkNonZero(double[] sides)
   {
-      if (sides.Any(value => value < 0))
+      if (sides.Any(value => value <= 0))
           throw new ArgumentOutOfRangeException();
   }
 

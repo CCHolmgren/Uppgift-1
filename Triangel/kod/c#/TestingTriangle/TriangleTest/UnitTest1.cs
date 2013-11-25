@@ -66,5 +66,16 @@ namespace UnitTestProject1
             Assert.IsTrue(new Triangle(isoscelesArray).isIsosceles());
             Assert.IsTrue(new Triangle(scaleneArray).isScalene());
         }
+
+        [TestMethod]
+        public void nontriangleTest()
+        {
+            try
+            {
+                new Triangle(0.0, 0.0, 0.0);
+                Assert.Fail();
+            }
+            catch (ArgumentOutOfRangeException) { };
+        }
     }
 }
