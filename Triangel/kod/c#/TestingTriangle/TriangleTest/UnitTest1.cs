@@ -47,6 +47,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException), "The values inputted are not valid.")]
         public void negativeValuesTest()
         {
             Assert.IsFalse(new Triangle(-1.0, -1.0, -1.0).isEquilateral());
@@ -55,6 +56,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException), "The values does not result in a valid triangle.")]
         public void NotTriangleTest()
         {
             //Does it return true even if it's not a triangle

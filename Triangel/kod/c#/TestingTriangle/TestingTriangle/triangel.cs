@@ -16,12 +16,16 @@ public class Triangle {
 
   public Triangle(double a, double b, double c) {
     sides = new double[] { a, b, c };
+    if (sides.Any(value => value > 0))
+        throw new ArgumentOutOfRangeException();
   } 
 
   public Triangle(double[] s) {
     sides = new double[s.Length];
     for(int i=0;i<s.Length;i++)
-      sides[i]=s[i];
+        sides[i] = s[i];
+    if (sides.Any(value => value > 0))
+        throw new ArgumentOutOfRangeException();
   } 
 
   public Triangle(Point a, Point b, Point c) {
@@ -29,6 +33,9 @@ public class Triangle {
     sides[0] = Math.Sqrt(Math.Pow((double)(b.x - a.x), 2.0) + Math.Pow((double)(b.y - a.y), 2.0));
     sides[1] = Math.Sqrt(Math.Pow((double)(b.x - c.x), 2.0) + Math.Pow((double)(b.x - a.x), 2.0));
     sides[2] = Math.Sqrt(Math.Pow((double)(c.x - a.x), 2.0) + Math.Pow((double)(c.x - a.x), 2.0));
+
+    if (sides.Any(value => value > 0))
+        throw new ArgumentOutOfRangeException();
   }
 
   public Triangle(Point[] s) {
@@ -36,6 +43,9 @@ public class Triangle {
     sides[0] = Math.Sqrt(Math.Pow((double)(s[1].x - s[0].x), 2.0) + Math.Pow((double)(s[1].y - s[0].y), 2.0));
     sides[1] = Math.Sqrt(Math.Pow((double)(s[1].x - s[2].x), 2.0) + Math.Pow((double)(s[1].x - s[2].x), 2.0));
     sides[2] = Math.Sqrt(Math.Pow((double)(s[2].x - s[0].x), 2.0) + Math.Pow((double)(s[2].x - s[0].x), 2.0));
+
+    if (sides.Any(value => value > 0))
+        throw new ArgumentOutOfRangeException();
   }
 
   private int uniqueSides() {
