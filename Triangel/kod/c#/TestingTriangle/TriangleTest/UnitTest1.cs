@@ -46,5 +46,12 @@ namespace UnitTestProject1
             Assert.IsFalse(new Triangle(1.5, 1.6, 1.7).isIsosceles());
         }
 
+        [TestMethod]
+        public void negativeValuesTest()
+        {
+            Assert.IsFalse(new Triangle(-1.0, -1.0, -1.0).isEquilateral());
+            Assert.IsFalse(new Triangle(-1.0, -2.0, -3.0).isScalene());
+            Assert.IsFalse(new Triangle(-1.0, -1.0, -2.0).isIsosceles());
+        }
     }
 }
