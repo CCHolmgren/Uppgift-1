@@ -53,5 +53,25 @@ namespace UnitTestProject1
             Assert.IsFalse(new Triangle(-1.0, -2.0, -3.0).isScalene());
             Assert.IsFalse(new Triangle(-1.0, -1.0, -2.0).isIsosceles());
         }
+
+        [TestMethod]
+        public void NotTriangleTest()
+        {
+            //Does it return true even if it's not a triangle
+            Assert.IsFalse(new Triangle(0.0, 0.0, 0.0).isIsosceles());
+            Assert.IsFalse(new Triangle(0.0, 0.0, 1.0).isIsosceles());
+            Assert.IsFalse(new Triangle(0.0, 1.0, 2.0).isIsosceles());
+
+            //Does it return true even if it's not a triangle
+            Assert.IsFalse(new Triangle(0.0, 0.0, 0.0).isScalene());
+            Assert.IsFalse(new Triangle(0.0, 0.0, 1.0).isScalene());
+            Assert.IsFalse(new Triangle(0.0, 1.0, 2.0).isScalene());
+
+            //Does it return true even if it's not a triangle
+            Assert.IsFalse(new Triangle(0.0, 0.0, 0.0).isEquilateral());
+            Assert.IsFalse(new Triangle(0.0, 0.0, 1.0).isEquilateral());
+            Assert.IsFalse(new Triangle(0.0, 1.0, 2.0).isEquilateral());
+        }
+
     }
 }
