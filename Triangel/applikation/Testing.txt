@@ -1,0 +1,29 @@
+Grundläggande funktionalitet
+test 1: 1,0 1,0 1,0 förväntat resultat: triangeln är liksidig
+test 2: 1,0 1,0 2,0 förväntat resultat: triangeln är likbent
+test 3: 1,0 2,0 3,0 förväntat resultat: triangeln har inga lika sidor
+
+test 4: [tomt] förväntat resultat: Indata kan inte tolkas som en triangel (eller liknande)
+test 5: "1" "2" "3" förväntat resultat: triangeln har inga lika sidor
+test 6: "1" "1" "1" förväntat resultat: triangeln är liksidig
+test 7: "1" "1" "2" förväntat resultat: triangeln är likbent
+test 8: -1 -1 -1 förväntat resultat: Indata kan inte tolkas som en triangel
+test 9: -1 1 1 förväntat resultat: Indata kan inte tolkas som en triangel
+test 10: -1 -1 1 förväntat resultat: Indata kan inte tolkas som en triangel
+test 11: 0 0 0 förväntat resultat: Indata kan inte tolkas som en triangel
+test 12: 0 0 1 förväntat resultat: Indata kan inte tolkas som en triangel
+test 13: 0 1 1 förväntat resultat: Indata kan inte tolkas som en triangel
+
+1 resultat: triangeln är liksidig
+2 resultat: triangeln är likbent
+3 resultat: triangeln har inga lika sidor
+4 resultat: triangeln är liksidig
+5 resultat: triangeln har inga lika sidor
+6 resultat: triangeln är liksidig
+7 resultat: triangeln är likbent
+8 resultat: triangeln är liksidig
+9 resultat: triangeln är likbent
+10 resultat: triangeln är likbent
+11 resultat: triangeln är liksidig
+12 resultat: triangeln är likbent
+13 resultat: triangeln är likbent
