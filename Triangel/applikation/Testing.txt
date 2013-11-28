@@ -16,7 +16,8 @@ test 13: 0 1 1 förväntat resultat: Indata kan inte tolkas som en triangel
 
 Kan vi få den att krasha
 test 14: [^S] od d förväntat resultat: Indata kan itne tolkas som en triangel 
-test 15: [Allt som inte ser ut som siffror, eller kan tolkas som det via en cast] förväntat resultat: Indata kan inte tolkas som en triangel
+test 15: [Allt som inte ser ut som siffror, eller kan tolkas som det via en cast] förväntat resultat: 
+Indata kan inte tolkas som en triangel
 
 Andra representationer av värden, i andra baser
 test 16: 0x01 0x01 0x01 förväntat resultat: Triangeln är liksidig
@@ -24,20 +25,33 @@ test 16: 0x01 0x01 0x01 förväntat resultat: Triangeln är liksidig
 1 resultat: triangeln är liksidig kommentar: Grundläggande funktion, väntat resultat 
 2 resultat: triangeln är likbent kommentar:  Grundläggande funktion, väntat resultat
 3 resultat: triangeln har inga lika sidor kommentar:  Grundläggande funktion, väntat resultat
-4 resultat: triangeln är liksidig kommentar: Detta beror säkerligen på att input parsas med double.Parse eller liknande, som då tolkar en tom sträng som 0, men user input bör först verifieras innan man använder det
-5 resultat: triangeln har inga lika sidor kommentar: Eftersom programmet antagligen använder double.Parse eller någon funktion som tolkar en sträng som spelar det ingen direkt roll hur siffrorna representeras, bara de kan tolkas korrekt
+4 resultat: triangeln är liksidig kommentar: Detta beror säkerligen på att input parsas med double.
+Parse eller liknande, som då tolkar en tom sträng som 0, men user input bör först verifieras innan 
+man använder det
+5 resultat: triangeln har inga lika sidor kommentar: Eftersom programmet antagligen använder double.
+Parse eller någon funktion som tolkar en sträng som spelar det ingen direkt roll hur siffrorna 
+representeras, bara de kan tolkas korrekt
 6 resultat: triangeln är liksidig kommentar: Se förra
 7 resultat: triangeln är likbent kommentar: Se förrförra
-8 resultat: triangeln är liksidig kommentar: En längd kan inte vara negativ, alltså borde programmet inte parsa detta som ett korrekt värde
+8 resultat: triangeln är liksidig kommentar: En längd kan inte vara negativ, alltså borde programmet 
+inte parsa detta som ett korrekt värde
 9 resultat: triangeln är likbent kommentar: Se förra
 10 resultat: triangeln är likbent kommentar: Se förrförra
-11 resultat: triangeln är liksidig kommentar: En triangel med en eller flera sidor som är 0, är inte en triangel
+11 resultat: triangeln är liksidig kommentar: En triangel med en eller flera sidor som är 0, är inte 
+en triangel
 12 resultat: triangeln är likbent kommentar: Se förra
 13 resultat: triangeln är likbent kommentar: Se förrförra
-14 resultat: krash med Ohanterat undantag System.FormatException kommentar: Väntat om man antar att input inte kollas innan man parsar det 
+14 resultat: krash med Ohanterat undantag System.FormatException kommentar: Väntat om man antar att 
+input inte kollas innan man parsar det 
 15 resultat: krash med Ohanterat undantag System.FormatException kommentar: Se förra
-16 resultat: krash med Ohanterat undantag System.FormatException kommentar: hexrepresentation av värdet 1 fungerade inte, antagligen för x'ets skull
+16 resultat: krash med Ohanterat undantag System.FormatException kommentar: hexrepresentation av 
+värdet 1 fungerade inte, antagligen för x'ets skull
 
 Sammanställning
-Grundläggande funktionen verkar fungera. Då vi inte vet den bakomliggande representationen av värdena så är det svårt att testa saker som overflow eller underflow, vilket hade varit intressant att testa om de värden man kommer använda har den mängden siffror. Om värdena är representerade av tillexempel BigNum eller Decimal eller motsvarande class som hanterar arbiträrt stora eller nummer med många decimaler så borde det inte vara ett problem att indata får ett värde som annars skulle få en fel decimal representation i en float eller en double.
+Grundläggande funktionen verkar fungera. Då vi inte vet den bakomliggande representationen av 
+värdena så är det svårt att testa saker som overflow eller underflow, vilket hade varit intressant 
+att testa om de värden man kommer använda har den mängden siffror. Om värdena är representerade av 
+tillexempel BigNum eller Decimal eller motsvarande class som hanterar arbiträrt stora eller nummer 
+med många decimaler så borde det inte vara ett problem att indata får ett värde som annars skulle få 
+en fel decimal representation i en float eller en double.
 Däremot verkar inte programmet göra någon indata koll alls då testerna 4 till 13 resulterar i ett resultat, när ett sådant inte är att förvänta sig. Man kan också se att indata inte kollas alls då programmet krashar med ett ohanterat undantag om man sätter in något som inte kan tänkas tolkas som en tal, till exempel textsträngen "dsa". 

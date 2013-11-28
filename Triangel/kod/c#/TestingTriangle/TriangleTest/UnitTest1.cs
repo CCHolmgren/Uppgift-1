@@ -59,25 +59,14 @@ namespace UnitTestProject1
         public void NotTriangleTest()
         {
             try
-            { //Does it return true even if it's not a triangle
-                new Triangle(0.0, 0.0, 0.0);
-                new Triangle(0.0, 0.0, 1.0);
-                new Triangle(0.0, 1.0, 2.0);
-
-                //Does it return true even if it's not a triangle
-                new Triangle(0.0, 0.0, 0.0);
-                new Triangle(0.0, 0.0, 1.0);
-                new Triangle(0.0, 1.0, 2.0);
-                //Does it return true even if it's not a triangle
-                new Triangle(0.0, 0.0, 0.0);
-                new Triangle(0.0, 0.0, 1.0);
-                new Triangle(0.0, 1.0, 2.0);
-                Assert.Fail("The constructors did not throw an exception.");
-            }
-            catch(ArgumentOutOfRangeException e)
             {
-
+                //Does it return true even if it's not a triangle
+                new Triangle(0.0, 0.0, 0.0);
+                new Triangle(0.0, 0.0, 1.0);
+                new Triangle(0.0, 1.0, 2.0);
+                Assert.Fail();
             }
+            catch (ArgumentOutOfRangeException) { };
         }
 
         [TestMethod]
